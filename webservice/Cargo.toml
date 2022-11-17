@@ -19,7 +19,7 @@ chrono = "0.4.23"
 # diesel = { version = "2.0.0", features = ["postgres"] }
 # dotenvy = "0.15"
 
-# 代表 bin 目录中的包的一个入口，可以有多个入口，启动命令 cargo run [workspace] --lib [bin name]
+# 代表 bin 目录中的包的一个入口，可以有多个入口，启动命令 cargo run --package [workspace] --lib [bin name]
 # default-run = [bin name] 设置默认启动的 bin
 [[bin]]
 name = "base1"
