@@ -1,0 +1,33 @@
+[package]
+name = "webservice"
+version = "0.1.0"
+edition = "2021"
+default-run = "teacher"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4"
+sqlx = { version = "0.6.2", features = [ "runtime-actix-native-tls" , "postgres" ] }
+
+#  串行化
+serde = "1.0.147"
+# 时间处理
+chrono = "0.4.23"
+
+# ORM
+# diesel = { version = "2.0.0", features = ["postgres"] }
+# dotenvy = "0.15"
+
+# 代表 bin 目录中的包的一个入口，可以有多个入口，启动命令 cargo run [workspace] --lib [bin name]
+# default-run = [bin name] 设置默认启动的 bin
+[[bin]]
+name = "base1"
+
+[[bin]]
+name = "base2"
+
+[[bin]]
+name = "teacher"
+# [[bin]]
+# name = "server2"

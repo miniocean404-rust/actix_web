@@ -6,6 +6,7 @@
   "author": "MiniOcean404 <1037306928@qq.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "cargo watch -x run"
+    "dev": "cargo watch -x run",
+    "service1":"cargo run webservice --bin service1"
   }
 }
