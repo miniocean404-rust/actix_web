@@ -1,13 +1,13 @@
 use actix_web::{web, App, HttpServer};
 use std::{io, sync::Mutex};
 
-#[path = "../state.rs"]
+#[path = "./base3_handle/state.rs"]
 mod state;
 
-#[path = "../router.rs"]
+#[path = "./base3_handle/router.rs"]
 mod route;
 
-#[path = "../handles.rs"]
+#[path = "./base3_handle/handles.rs"]
 mod handles;
 
 use route::*;

@@ -1,7 +1,7 @@
 use std::io;
 
 use actix_web::{
-    get, post,
+    get,
     web::{self},
     App, HttpResponse, HttpServer, Responder,
 };
@@ -24,11 +24,6 @@ async fn index(data: web::Data<AppState>) -> String {
 async fn manual_hello() -> impl Responder {
     HttpResponse::Ok().body("Hey there!")
 }
-
-// #[get("/{id}/{name}/index.html")]
-// async fn restful(web::Path((id, name)): web::Path<(u32, String)>) -> impl Responder {
-//     format!("Hello {}! id:{}", name, id)
-// }
 
 #[actix_web::main]
 async fn main() -> io::Result<()> {

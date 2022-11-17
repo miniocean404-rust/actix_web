@@ -2,7 +2,7 @@
 name = "webservice"
 version = "0.1.0"
 edition = "2021"
-default-run = "teacher"
+default-run = "base3"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -28,6 +28,6 @@ name = "base1"
 name = "base2"
 
 [[bin]]
-name = "teacher"
+name = "base3"
 # [[bin]]
 # name = "server2"

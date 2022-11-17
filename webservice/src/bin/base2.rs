@@ -1,18 +1,14 @@
 use std::io;
 
-use actix_web::{
-    web::{self},
-    App, HttpResponse, HttpServer, Responder,
-};
+use actix_web::{App, HttpServer};
 
-// 配置局部路由
-pub fn example_route(cfg: &mut web::ServiceConfig) {
-    cfg.route("/example", web::get().to(example_fn));
-}
+#[path = "./base2_handle/config.rs"]
+mod config;
 
-async fn example_fn() -> impl Responder {
-    HttpResponse::Ok().json("例子响应")
-}
+#[path = "./base2_handle/example.rs"]
+mod example;
+
+use crate::config::example_route;
 
 #[actix_web::main]
 async fn main() -> io::Result<()> {
