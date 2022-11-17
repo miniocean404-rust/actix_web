@@ -7,6 +7,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "cargo watch -x run",
-    "service1":"cargo run webservice --bin service1"
+    "base1": "cargo run --package webservice --bin base1",
+    "base2": "cargo run --package webservice --bin base2",
+    "base3": "cargo run --package webservice --bin base3"
   }
 }
