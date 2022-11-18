@@ -1,17 +1,9 @@
 use actix_web::{web, App, HttpServer};
 use std::{io, sync::Mutex};
 
-#[path = "./base3_handle/state.rs"]
-mod state;
-
-#[path = "./base3_handle/router.rs"]
-mod route;
-
-#[path = "./base3_handle/handles.rs"]
-mod handles;
-
-use route::*;
-use state::AppState;
+#[path = "./base3_handle/module.rs"]
+mod module;
+use crate::module::*;
 
 #[actix_web::main]
 async fn main() -> io::Result<()> {

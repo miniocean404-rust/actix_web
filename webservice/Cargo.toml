@@ -23,11 +23,7 @@ chrono = "0.4.23"
 # default-run = [bin name] 设置默认启动的 bin
 [[bin]]
 name = "base1"
-
-[[bin]]
-name = "base2"
+# path = "" # 指定 bin 主入口路径
 
 [[bin]]
 name = "base3"
-# [[bin]]
-# name = "server2"
