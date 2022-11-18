@@ -1,4 +1,7 @@
-use actix_web::web::{self};
+use actix_web::{
+    web::{self},
+    HttpResponse,
+};
 
 use crate::module::example::{example_fn, restful, use_post};
 
@@ -8,5 +11,6 @@ pub fn example_route(cfg: &mut web::ServiceConfig) {
 
     cfg.service(use_post);
     cfg.service(restful);
-    // cfg.service(use_post);
+
+    cfg.service(web::resource("/test").route(web::head().to(HttpResponse::MethodNotAllowed)));
 }
