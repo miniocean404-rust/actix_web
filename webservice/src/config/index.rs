@@ -13,8 +13,11 @@ pub fn example_route(cfg: &mut web::ServiceConfig) {
     cfg.route(
         "/example",
         web::get()
-            .to(example_fn)
-            .guard(guard::Header("Host", "www.rust-lang.org")),
+            // guard 校验是否有对应的请求头
+            .guard(guard::Header("Host", "www.rust-lang.org"))
+            .to(example_fn),
     );
-    cfg.service(web::resource("/test").route(web::head().to(HttpResponse::MethodNotAllowed)));
+
+    // 在资源 /test 下 使用 get 请求 返回 方法不支持
+    cfg.service(web::resource("/test").route(web::get().to(HttpResponse::MethodNotAllowed)));
 }
