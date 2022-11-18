@@ -1,6 +1,6 @@
 pub mod common;
+pub mod config;
 pub mod module;
-pub mod route;
 
 pub use common::constant::*;
-pub use route::*;
+pub use config::*;
